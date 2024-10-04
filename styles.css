@@ -1,0 +1,396 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #181818;
+}
+
+h1,
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700; /* Bold weight */
+	color: #f2f2f2;
+}
+
+#showcase {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: evenly;
+	text-align: center;
+	padding: 50px 20px;
+	background-color: #181818;
+	min-height: 100vh; /* Ensures it covers the full height */
+}
+
+#showcase h1 {
+	font-size: 48px;
+	margin-bottom: 50px;
+	font-weight: bold;
+	color: #f2f2f2;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400; /* Regular weight */
+	color: #f2f2f2;
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.app-section {
+	text-align: center;
+}
+
+.app-section img {
+	width: 250px;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.app-section h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #b80004;
+}
+
+.app-section p {
+	font-size: 16px;
+	color: #ffffff;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.app-section img {
+	height: auto;
+	margin-bottom: 20px;
+	transition: transform 0.3s ease-in-out;
+}
+
+/* Center image larger for 3D effect */
+.app-section:nth-child(2) img {
+	width: 280px; /* Larger size for center image */
+}
+
+/* Smaller size for side images */
+.app-section:nth-child(1) img,
+.app-section:nth-child(3) img {
+	width: 220px; /* Smaller size for left and right images */
+}
+
+/* Optional: Adding a hover effect to enhance the 3D feel */
+.app-section img:hover {
+	transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.app-section img {
+		width: 200px;
+	}
+
+	#showcase h1 {
+		font-size: 36px;
+	}
+}
+
+/* Download Section Styling */
+.download-section {
+	text-align: center;
+	padding: 20px;
+	background-color: #181818; /* Dark background to match your theme */
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+/* App Store and Google Play button styling */
+.store-link {
+	display: inline-block;
+	text-align: center;
+	margin: 0 20px; /* Space between the buttons */
+	text-decoration: none;
+	color: white; /* Text color */
+}
+
+.store-link img {
+	width: 150px; /* Adjust size of the store logos */
+	height: auto;
+	transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover effect for images */
+.store-link img:hover {
+	transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+/* Rating styling */
+.store-link p {
+	margin-top: 10px;
+	font-size: 18px;
+	color: #f2f2f2; /* Light text color for ratings */
+	font-weight: bold;
+}
+
+/* Total downloads text styling */
+.download-stats {
+	margin-top: 20px;
+	font-size: 20px;
+	color: #f2f2f2;
+	font-weight: bold;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+	.store-link img {
+		width: 120px; /* Make store logos smaller on mobile */
+	}
+	.download-section {
+		padding: 15px;
+	}
+	.download-stats {
+		font-size: 18px;
+	}
+}
+
+footer {
+	background-color: #000;
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	margin-top: auto;
+}
+
+.footer-contact,
+.footer-social,
+.footer-challenge,
+.footer-legal {
+	flex: 1;
+	margin: 10px 0;
+}
+
+.footer-contact a,
+.footer-legal a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.footer-social a img {
+	width: 32px;
+	margin: 0 10px;
+}
+
+.footer-challenge h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.footer-legal p {
+	font-size: 14px;
+}
+
+.footer-legal a {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+@media (max-width: 768px) {
+	.footer-container {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+/* Navbar Styles */
+.navbar {
+	background-color: #181818; /* Dark background */
+	padding: 10px 20px;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	display: flex;
+	border-bottom: 2px solid #ff4500;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	max-width: 1200px; /* Width limit for large screens */
+}
+
+/* Logo and App Name Container */
+.logo-app-name {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start; /* Aligns logo and app name to the left */
+	flex: 1; /* Takes up space to push nav links to center */
+}
+
+/* Logo Styles */
+.logo img {
+	width: 60px; /* Adjust logo size */
+	height: auto;
+}
+
+.app-name a {
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+	flex: 0; /* Set flex to 0 to avoid extra space */
+	display: flex;
+	justify-content: flex-start; /* Align the navigation links to the left */
+	margin-left: 40px; /* Add margin-left to create space between logo and links */
+}
+
+.nav-links ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-links li {
+	margin-left: 30px; /* Adjust this value for spacing between the links */
+}
+
+.nav-links a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	position: relative;
+	padding: 5px 0;
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+	height: 2px;
+	background-color: #ff4500; /* Accent color for hover underline */
+}
+
+/* Sticky Nav */
+.navbar.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+	.nav-links ul {
+		flex-direction: row;
+		margin-top: 10px;
+	}
+
+	.nav-links li {
+		margin-left: 0;
+		margin-bottom: 15px;
+		margin-right: 15px;
+	}
+
+	.app-name a {
+		font-size: 20px;
+	}
+}
+
+/* News Section */
+.news-section {
+	text-align: center; /* Center align section title */
+	min-height: 100vh;
+	padding: 20px 0;
+}
+
+.news-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Two columns */
+	gap: 20px; /* Space between articles */
+	justify-items: center; /* Center items in grid */
+}
+
+.news-article {
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+	transition: transform 0.3s;
+	width: 80%; /* Reduced width for articles */
+	max-width: 400px; /* Maximum width for larger screens */
+	height: 250px; /* Increased height for articles */
+}
+
+.article-image {
+	width: 100%;
+	height: 100%; /* Use full height of the article */
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.article-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: white;
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+	text-align: center;
+}
+
+.article-overlay h2 {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.news-article:hover {
+	transform: scale(1.05);
+}
+
+/* Different widths for articles */
+.news-article:nth-child(odd) {
+	grid-column: span 1; /* First article takes 1 column */
+}
+
+.news-article:nth-child(even) {
+	grid-column: span 2; /* Second article takes 2 columns */
+}
