@@ -8,6 +8,11 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #181818;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: #181818;
+	color: #fff;
 }
 
 h1,
@@ -15,98 +20,6 @@ h2 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700; /* Bold weight */
 	color: #f2f2f2;
-}
-
-#showcase {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: evenly;
-	text-align: center;
-	padding: 50px 20px;
-	background-color: #181818;
-	min-height: 100vh; /* Ensures it covers the full height */
-}
-
-#showcase h1 {
-	font-size: 48px;
-	margin-bottom: 50px;
-	font-weight: bold;
-	color: #f2f2f2;
-}
-
-p {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400; /* Regular weight */
-	color: #f2f2f2;
-}
-
-.container {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-.app-section {
-	text-align: center;
-}
-
-.app-section img {
-	width: 250px;
-	height: auto;
-	margin-bottom: 20px;
-}
-
-.app-section h2 {
-	font-size: 24px;
-	margin-bottom: 10px;
-	color: #b80004;
-}
-
-.app-section p {
-	font-size: 16px;
-	color: #ffffff;
-	width: 200px;
-	margin: 0 auto;
-}
-
-.app-section img {
-	height: auto;
-	margin-bottom: 20px;
-	transition: transform 0.3s ease-in-out;
-}
-
-/* Center image larger for 3D effect */
-.app-section:nth-child(2) img {
-	width: 280px; /* Larger size for center image */
-}
-
-/* Smaller size for side images */
-.app-section:nth-child(1) img,
-.app-section:nth-child(3) img {
-	width: 220px; /* Smaller size for left and right images */
-}
-
-/* Optional: Adding a hover effect to enhance the 3D feel */
-.app-section img:hover {
-	transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-	.container {
-		flex-direction: column;
-		gap: 30px;
-	}
-
-	.app-section img {
-		width: 200px;
-	}
-
-	#showcase h1 {
-		font-size: 36px;
-	}
 }
 
 /* Download Section Styling */
@@ -334,3 +247,126 @@ footer {
 	}
 }
 
+/* News Section */
+.news-section {
+	padding: 40px 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	flex-grow: 1;
+}
+
+.news-container h1 {
+	text-align: center;
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 40px;
+}
+
+.news-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+}
+
+.news-card:hover {
+	transform: scale(1.05);
+}
+
+.news-card {
+	background-color: #242424;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+	min-height: 400px; /* Adjust the min-height as needed */
+}
+
+.news-card img {
+	width: 100%;
+	height: 300px; /* Adjust the height of the image */
+	object-fit: contain;
+}
+
+.news-card-content {
+	padding: 20px;
+}
+
+.news-card-content h2 {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+.news-card-content p {
+	font-size: 16px;
+	color: #d3d3d3;
+}
+
+@media (max-width: 768px) {
+	/* General adjustments */
+	h1 {
+		font-size: 28px; /* Adjust main heading size */
+	}
+
+	h2 {
+		font-size: 24px; /* Adjust secondary heading size */
+	}
+
+	.news-container h1 {
+		font-size: 30px; /* Adjust news section heading */
+	}
+
+	.news-card-content h2 {
+		font-size: 18px; /* Adjust news card heading */
+	}
+
+	.news-card-content p {
+		font-size: 14px; /* Adjust news card paragraph */
+	}
+
+	.download-section {
+		padding: 15px; /* Less padding on mobile */
+	}
+
+	.store-link img {
+		width: 120px; /* Smaller logos on mobile */
+	}
+
+	.download-stats {
+		font-size: 18px; /* Adjust font size for stats */
+	}
+
+	/* Footer adjustments */
+	.footer-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navbar {
+		flex-direction: column; /* Stack items vertically */
+	}
+
+	.nav-links {
+		margin-left: 0; /* Remove left margin on mobile */
+		flex-direction: column; /* Stack links vertically */
+	}
+
+	.nav-links li {
+		margin-left: 0; /* Remove margin on links */
+		margin-bottom: 10px; /* Add margin between links */
+	}
+
+	.app-name a {
+		font-size: 20px; /* Smaller app name size */
+	}
+
+	.hero-text h1 {
+		font-size: 24px; /* Smaller hero heading */
+	}
+
+	.hero-text p {
+		font-size: 14px; /* Smaller hero date */
+	}
+
+	.news-grid {
+		grid-template-columns: 1fr; /* Stack news cards vertically */
+	}
+}

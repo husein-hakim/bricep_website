@@ -1,0 +1,335 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #181818;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.article-header {
+    background-color: #181818;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Fixed height */
+    overflow: hidden; /* Hide overflow if image is larger than the container */
+    border-radius: 10px; /* Optional: round corners */
+    position: relative; /* For positioning */
+}
+
+.hero-image img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Set the height to 100% of the container */
+    position: absolute; /* Position absolutely to fill the container */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.article-date {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Main Article Content */
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-content article {
+    margin-bottom: 40px;
+}
+
+.article-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.article-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d3d3d3;
+}
+
+/* Footer Styles */
+.article-footer {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.article-container {
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Center the article */
+    padding: 20px; /* Padding around the article */
+}
+
+.hero-image img {
+    width: 100%; /* Make hero image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Round corners of the image */
+}
+
+h1 {
+    font-size: 2.5rem; /* Size for the main title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+h2 {
+    font-size: 2rem; /* Size for subtitles */
+    margin-top: 20px; /* Space above subtitles */
+    margin-bottom: 10px; /* Space below subtitles */
+}
+
+p {
+    font-size: 1.2rem; /* Base font size for paragraphs */
+    line-height: 1.6; /* Spacing between lines for readability */
+    margin-bottom: 15px; /* Space below each paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller subtitle size for mobile */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph size for mobile */
+    }
+
+    .article-container {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+}
+
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .article-content {
+        padding: 10px;
+    }
+
+    .article-content h2 {
+        font-size: 22px;
+    }
+
+    .footer-container p {
+        font-size: 12px;
+    }
+}
+
+footer {
+	background-color: #000;
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	margin-top: auto;
+}
+
+.footer-contact,
+.footer-social,
+.footer-challenge,
+.footer-legal {
+	flex: 1;
+	margin: 10px 0;
+}
+
+.footer-contact a,
+.footer-legal a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.footer-social a img {
+	width: 32px;
+	margin: 0 10px;
+}
+
+.footer-challenge h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.footer-legal p {
+	font-size: 14px;
+}
+
+.footer-legal a {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+@media (max-width: 768px) {
+	.footer-container {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+/* Navbar Styles */
+.navbar {
+	background-color: #181818; /* Dark background */
+	padding: 10px 20px;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	display: flex;
+	border-bottom: 2px solid #ff4500;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	max-width: 1200px; /* Width limit for large screens */
+}
+
+/* Logo and App Name Container */
+.logo-app-name {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start; /* Aligns logo and app name to the left */
+	flex: 1; /* Takes up space to push nav links to center */
+}
+
+/* Logo Styles */
+.logo img {
+	width: 60px; /* Adjust logo size */
+	height: auto;
+}
+
+.app-name a {
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+	flex: 0; /* Set flex to 0 to avoid extra space */
+	display: flex;
+	justify-content: flex-start; /* Align the navigation links to the left */
+	margin-left: 40px; /* Add margin-left to create space between logo and links */
+}
+
+.nav-links ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-links li {
+	margin-left: 30px; /* Adjust this value for spacing between the links */
+}
+
+.nav-links a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	position: relative;
+	padding: 5px 0;
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+	height: 2px;
+	background-color: #ff4500; /* Accent color for hover underline */
+}
+
+/* Sticky Nav */
+.navbar.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+	.nav-links ul {
+		flex-direction: row;
+		margin-top: 10px;
+	}
+
+	.nav-links li {
+		margin-left: 0;
+		margin-bottom: 15px;
+		margin-right: 15px;
+	}
+
+	.app-name a {
+		font-size: 20px;
+	}
+}
