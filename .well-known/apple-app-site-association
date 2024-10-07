@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "BG8YSU2SAM.com.huseinhakim.Bricep",
+        "paths": [
+          "/workout/*"
+        ]
+      }
+    ]
+  }
+}
