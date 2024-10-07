@@ -5,7 +5,7 @@
       {
         "appID": "BG8YSU2SAM.com.huseinhakim.Bricep",
         "paths": [
-          "/workout/*"
+          "/share*", "/share/*"
         ]
       }
     ]
